@@ -167,6 +167,14 @@ numbers.indexOf(10)
 /*Returns the last index of target in the array, but it was not fount, returns -1 */
 numbers.lastIndexOf(10)
 
+/*Returns the first index of target in the array, but it was not fount, returns undefined*/
+numbers.find(number=> number > 5)
+
+/*Returns true if the array contains the target*/
+numbers.includes(1)
+
+
+
 
 
 

@@ -23,6 +23,16 @@ Se você deseja contribuir com este projeto, ficamos felizes em receber suas mel
 
 ## Como Rodar os Exemplos
 
-Cada capítulo possui um diretório com exemplos e implementações. O código está comentado para melhor entendimento dos métodos. Para rodar, você pode baixar as dependências, que no caso são: TypeScript e ts-node e pelo terminal `utilizar o comando: ts-node caminho do arquivo`
+1. Certifique-se de ter o Node.js, TypeScript e o ts-node instalados em seu ambiente de desenvolvimento.
+
+2. Navegue até o diretório do capítulo que você deseja executar:
+
+3. Execute os exemplos utilizando o `ts-node caminho/do/arquivo/exemplo.ts`:
+
+Substitua "caminho/do/arquivo/exemplo.ts" pelo caminho correto do arquivo de exemplo que você deseja executar.
+
+
+Cada capítulo possui um diretório com exemplos e implementações. O código está comentado para melhor entendimento dos métodos.
+
 
 Espero que este repositório ajude em seus estudos sobre estrutura de dados e algoritmos com JavaScript, inspirado no livro da Loiane Groner e da editora Novatec!

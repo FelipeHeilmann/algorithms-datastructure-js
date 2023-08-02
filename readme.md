@@ -9,7 +9,9 @@ O objetivo deste projeto é fornecer exemplos práticos e implementações de al
 ## Estrutura do Repositório
 
 - `chapter3/`: Exemplos e implementações referentes ao Capítulo 1 do livro que fala sobre arrays.
-- `chapter4/`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre stack.
+- `chapter4/`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre stacks.
+- `chapter5/queue`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre queues.
+- `chapter5/deque`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre deques.
 
 ## Como Contribuir
 

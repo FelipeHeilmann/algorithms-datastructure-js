@@ -44,5 +44,7 @@ function decimalToBinary(decNumer: number){
     return binaryString
 }
 
+console.log(decimalToBinary(10))
+
 
 

@@ -10,8 +10,9 @@ O objetivo deste projeto é fornecer exemplos práticos e implementações de al
 
 - `chapter3/`: Exemplos e implementações referentes ao Capítulo 1 do livro que fala sobre arrays.
 - `chapter4/`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre stacks.
-- `chapter5/queue`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre queues.
-- `chapter5/deque`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre deques.
+- `chapter5/queue`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre queues.
+- `chapter5/deque`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre deques.
+- `chapter6/singleLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre single linked lists.
 
 ## Como Contribuir
 

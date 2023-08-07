@@ -1,10 +1,11 @@
 import { defaultEquals } from "../utils";
-import { Node } from "./node";
+import { Node } from "./Node";
 
 export class LinkedList<T> {
-    private count: number;
-    private head: Node<T> | null;
-    private equalsFn: (a: any, b: any) => boolean;
+    protected count: number;
+    protected head: Node<T> | null;
+    protected equalsFn: (a: T, b: T) => boolean;
+
 
     constructor(equalsFn: (a: T, b: T) => boolean = defaultEquals) {
         this.count = 0

@@ -56,7 +56,7 @@ export class StackObj<T> {
     // Method to convert the stack elements to a comma-separated string
     toString() {
         if (this.isEmpty()) // Check if the stack is empty
-            return ''; // If empty, return an empty string
+            return '' // If empty, return an empty string
         
         let objString: string = `${this.items[0]}` // Start with the first element in 'items'
         for (let i = 1; i < this.count; i++) {

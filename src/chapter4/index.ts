@@ -1,5 +1,5 @@
-import { Stack } from "./stack";
-import { StackObj } from "./stack-obj";
+import { Stack } from "./stack"
+import { StackObj } from "./stack-obj"
 
 const stack = new Stack()
 

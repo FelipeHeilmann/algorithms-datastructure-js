@@ -1,4 +1,4 @@
-import { Queue } from "./queue";
+import { Queue } from "./Queue";
 
 // Function to play the hot potato game with given players and the number of tosses (num).
 // The function returns the list of eliminated players and the winner of the game.

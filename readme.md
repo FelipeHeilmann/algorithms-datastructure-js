@@ -15,6 +15,7 @@ O objetivo deste projeto é fornecer exemplos práticos e implementações de al
 - `chapter6/singleLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre single linked lists.
 - `chapter6/doubleLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre double linked lists.
 - `chapter6/circularLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre cirular linked lists.
+- `chapter6/stackLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre stack usando doubly linked lists.
 
 ## Como Contribuir
 

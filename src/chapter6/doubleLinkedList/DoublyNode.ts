@@ -6,5 +6,17 @@ export class DoublyNode<T>{
         this.element = element
         this.next = null
         this.prev = null
+    }
+    getNext(){
+        return this.next
     } 
+    setNext(next: DoublyNode<T>){
+        this.next = next
+    }
+    getPrev(){
+        return this.prev
+    }
+    setPrev(prev: DoublyNode<T>){
+        this.prev = prev || null
+    }
 }

@@ -4,7 +4,7 @@ import { Node } from "./Node";
 export class LinkedList<T> {
     protected count: number;
     protected head: Node<T> | null;
-    protected equalsFn: (a: T, b: T) => boolean;
+    protected equalsFn: (a: T, b: T) => boolean
 
 
     constructor(equalsFn: (a: T, b: T) => boolean = defaultEquals) {
@@ -15,7 +15,7 @@ export class LinkedList<T> {
 
     // Add an element to the end of the linked list
     push(element: T) {
-        const node = new Node(element);
+        const node = new Node(element)
         let current: Node<T>
 
         if (this.head == null) {
@@ -72,7 +72,7 @@ export class LinkedList<T> {
                 this.head = current!.next
             } else {
                 // Find the previous node of the given index and remove the current node from the linked list.
-                const previous = this.getElementAt(index - 1);
+                const previous = this.getElementAt(index - 1)
                 current = previous!.next
                 previous!.next = current!.next
             }
@@ -90,7 +90,7 @@ export class LinkedList<T> {
                 // Return the index if the element is found in the linked list.
                 return i
             }
-            current = current.next;
+            current = current.next
         }
         // Return -1 if the element is not found in the linked list.
         return -1

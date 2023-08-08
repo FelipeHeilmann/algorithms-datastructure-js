@@ -1,16 +1,14 @@
+import { LinkedList } from "../singleLinkedList/LinkedList";
 import { defaultEquals } from "../utils";
 import { DoublyNode } from "./DoublyNode";
 
-export class DoublyLinkedList<T>{
-    head: DoublyNode<T> | null
-    tail: DoublyNode<T> | null
-    private equalsFn: (a: any, b: any) => boolean
-    count: number
-    constructor(equalsFn: (a: T, b: T) => boolean = defaultEquals) {
+export class DoublyLinkedList<T> extends LinkedList<T> {
+    protected head: DoublyNode<T> | undefined;
+    protected tail: DoublyNode<T> | undefined;
+    protected equalsFn: (a: any, b: any) => boolean
+    constructor(equalsFn = defaultEquals) {
+        super(equalsFn)
         this.equalsFn = equalsFn
-        this.count = 0
-        this.tail = null
-        this.head = null
     }
 
     push(element: T) {
@@ -31,80 +29,65 @@ export class DoublyLinkedList<T>{
         if (index >= 0 && index <= this.count) {
             const node = new DoublyNode(element)
             let current = this.head
+
             if (index === 0) {
-                if (this.head = null) {
+                if (this.head == null) {
                     this.head = node
                     this.tail = node
-                }
-                else {
+                } else {
                     node.next = this.head
-                    current!.prev = node
-                    this.head = node
+                    this.head.prev = node
+                    this.head = node;
                 }
-            }
-            else if (index === this.count) {
+            } else if (index === this.count) {
                 current = this.tail
-                node.prev = this.tail
                 current!.next = node
+                node.prev = current
                 this.tail = node
-            }
-            else {
-                const previus = this.getElementAt(index - 1)
-                const current = previus!.next
-                node.next = current
-                node.prev = previus
+            } else {
+                const previous = this.getElementAt(index - 1)
+                current = previous!.next;
+                node.next = current;
+                previous!.next = node
+
                 current!.prev = node
-                previus!.next = node
+                node.prev = previous!
             }
             this.count++
             return true
         }
-        return false
-    }
-    remove(element: T) {
-        const index = this.indexOf(element)
-        return this.removeAt(index)
+        return false;
     }
     removeAt(index: number) {
-        if (index >= 0 && index <= this.count) {
-            let current = this.head || null
+        if (index >= 0 && index < this.count) {
+            let current = this.head
+
             if (index === 0) {
-                this.head = current!.next
-                if (this.count === 0) {
-                    this.tail = null
+                this.head = this.head!.next;
+                // if there is only one item, then we update tail as well
+                if (this.count === 1) {
+                    this.tail = undefined
+                } else {
+                    this.head!.prev = undefined // {3}
                 }
-                else {
-                    this.head!.prev = null
-                }
-            }
-            else if (index === this.count - 1) {
+            } else if (index === this.count - 1) {
+                // last item
                 current = this.tail
                 this.tail = current!.prev
-                this.tail!.next = null
-            }
-            else {
-                current = this.getElementAt(index)
-                console.log(current)
+                this.tail!.next = undefined
+            } else {
+                current = this.getElementAt(index);
                 const previous = current!.prev
+                // link previous with current's next - skip it to remove
                 previous!.next = current!.next
                 current!.next!.prev = previous
             }
             this.count--
-            return current?.element
+            return current!.element
         }
-        return false
+        return undefined;
     }
-    getElementAt(index: number) {
-        if (index >= 0 && index < this.count) {
-            let current: DoublyNode<T> | null = this.head
-            for (let i = 0; i < index && current != null; i++) {
-                // Traverse the linked list to find the node at the given index.
-                current = current.next
-            }
-            return current
-        }
-        return null
-    }
+
     indexOf(element: T) {
         let current = this.head
         for (let i = 0; i < this.count && current != null; i++) {
@@ -130,6 +113,10 @@ export class DoublyLinkedList<T>{
     // Get the current size of the linked list
     size() {
         return this.count
+    }
+    clear() {
+        super.clear()
+        this.tail = undefined
     }
     // Convert the linked list to a string representation
     toString() {

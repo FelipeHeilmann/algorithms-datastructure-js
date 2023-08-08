@@ -2,14 +2,14 @@ import { defaultEquals } from "../utils";
 import { Node } from "./Node";
 
 export class LinkedList<T> {
-    protected count: number;
-    protected head: Node<T> | null;
+    protected count: number
+    protected head: Node<T> | undefined
     protected equalsFn: (a: T, b: T) => boolean
 
 
     constructor(equalsFn: (a: T, b: T) => boolean = defaultEquals) {
         this.count = 0
-        this.head = null
+        this.head = undefined
         this.equalsFn = equalsFn
     }
 
@@ -98,32 +98,31 @@ export class LinkedList<T> {
 
     // Get the element at a specific position in the linked list
     getElementAt(index: number) {
-        if (index >= 0 && index < this.count) {
-            let current: Node<T> | null = this.head
-            for (let i = 0; i < index && current != null; i++) {
-                // Traverse the linked list to find the node at the given index.
-                current = current.next
+        if (index >= 0 && index <= this.count) {
+            let node = this.head
+            for (let i = 0; i < index && node != null; i++) {
+                node = node.next
             }
-            return current
+            return node
         }
-        return null
+        return undefined
     }
 
     // Get the head (first element) of the linked list
     getHead() {
         return this.head
     }
-
     // Check if the linked list is empty
     isEmpty() {
         return this.count === 0
     }
-
     // Get the current size of the linked list
     size() {
         return this.count
     }
-
+    clear() {
+        this.head = undefined
+    }
     // Convert the linked list to a string representation
     toString() {
         if (this.head == null) {

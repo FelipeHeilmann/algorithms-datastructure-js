@@ -1,10 +1,7 @@
-export class Node<T>{
-    element: T
-    next: Node<T> | null
-
+export class Node<T> {
+    public element: T
+    public next?: Node<T>
     constructor(element: T) {
         this.element = element
-        this.next = null
     }
-
 }

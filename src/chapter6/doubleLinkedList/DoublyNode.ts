@@ -1,10 +1,13 @@
-export class DoublyNode<T>{
-    element: T
-    next: DoublyNode<T> | null
-    prev: DoublyNode<T> | null
-    constructor(element: T) {
+import { Node } from "../singleLinkedList/Node";
+
+export class DoublyNode<T> extends Node<T> {
+    public element: T
+    public next?: DoublyNode<T>
+    public prev?: DoublyNode<T>
+    constructor(
+        element: T
+    ) {
+        super(element)
         this.element = element
-        this.next = null
-        this.prev = null
     }
 }

@@ -2,11 +2,11 @@ import { defaultEquals } from "../utils";
 import { DoublyNode } from "./DoublyNode";
 
 export class DoublyLinkedList<T>{
-    head: DoublyNode<T> | null 
-    tail: DoublyNode<T> | null 
+    head: DoublyNode<T> | null
+    tail: DoublyNode<T> | null
     private equalsFn: (a: any, b: any) => boolean
     count: number
-    constructor(equalsFn: (a: T, b: T) => boolean = defaultEquals){
+    constructor(equalsFn: (a: T, b: T) => boolean = defaultEquals) {
         this.equalsFn = equalsFn
         this.count = 0
         this.tail = null
@@ -27,28 +27,28 @@ export class DoublyLinkedList<T>{
         }
         this.count++
     }
-    insert(element: T, index: number ){
-        if(index >= 0 && index <= this.count){
-        const node = new DoublyNode(element) 
-        let current = this.head
-            if(index === 0){
-                if(this.head = null){
+    insert(element: T, index: number) {
+        if (index >= 0 && index <= this.count) {
+            const node = new DoublyNode(element)
+            let current = this.head
+            if (index === 0) {
+                if (this.head = null) {
                     this.head = node
                     this.tail = node
                 }
-                else{
+                else {
                     node.next = this.head
                     current!.prev = node
                     this.head = node
                 }
             }
-            else if(index === this.count){
+            else if (index === this.count) {
                 current = this.tail
                 node.prev = this.tail
                 current!.next = node
                 this.tail = node
             }
-            else{
+            else {
                 const previus = this.getElementAt(index - 1)
                 const current = previus!.next
                 node.next = current
@@ -65,24 +65,24 @@ export class DoublyLinkedList<T>{
         const index = this.indexOf(element)
         return this.removeAt(index)
     }
-    removeAt(index: number){
-        if(index >= 0 && index <= this.count){
+    removeAt(index: number) {
+        if (index >= 0 && index <= this.count) {
             let current = this.head || null
-            if(index === 0){
+            if (index === 0) {
                 this.head = current!.next
-                if(this.count === 0){
+                if (this.count === 0) {
                     this.tail = null
                 }
-                else{
+                else {
                     this.head!.prev = null
                 }
             }
-            else if(index === this.count - 1){
-                current = this.tail 
+            else if (index === this.count - 1) {
+                current = this.tail
                 this.tail = current!.prev
                 this.tail!.next = null
             }
-            else{
+            else {
                 current = this.getElementAt(index)
                 console.log(current)
                 const previous = current!.prev
@@ -120,7 +120,7 @@ export class DoublyLinkedList<T>{
     getHead() {
         return this.head
     }
-    getTail(){
+    getTail() {
         return this.tail
     }
     // Check if the linked list is empty
@@ -133,16 +133,16 @@ export class DoublyLinkedList<T>{
     }
     // Convert the linked list to a string representation
     toString() {
-    if (this.head == null) {
-        return ''
-    }
-    let objString = `${this.head.element}`
-    let current = this.head.next
-    for (let i = 1; i < this.size() && current != null; i++) {
-        // Traverse the linked list and concatenate the elements into a string.
-        objString = `${objString} <-> ${current.element}`
-        current = current.next
-    }
-    return objString
+        if (this.head == null) {
+            return ''
+        }
+        let objString = `${this.head.element}`
+        let current = this.head.next
+        for (let i = 1; i < this.size() && current != null; i++) {
+            // Traverse the linked list and concatenate the elements into a string.
+            objString = `${objString} <-> ${current.element}`
+            current = current.next
+        }
+        return objString
     }
 }

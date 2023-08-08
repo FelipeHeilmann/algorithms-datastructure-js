@@ -60,3 +60,4 @@ export class CircularLinkedList<T> extends LinkedList<T>{
         return undefined
     }
 }
+

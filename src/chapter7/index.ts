@@ -26,8 +26,24 @@ setB.add(4)
 setB.add(5)
 setB.add(6)
 
+const setC = new Set()
+setC.add(1)
+setC.add(2)
+
+const setD = new Set()
+setD.add(1)
+setD.add(2)
+
+const setE = new Set()
+setE.add(2)
+setE.add(3)
+
 const union = setA.union(setB)
 const inserction = setA.intersection(setB)
+const difference = setA.difference(setB)
 
 console.log(union.values())
-console.log(inserction)                                                                                                                                                              
+console.log(difference.values())
+console.log(inserction.values())
+console.log(setC.isSubsetOf(setD))
+console.log(setE.isSubsetOf(setC))                                                                                                                                                              

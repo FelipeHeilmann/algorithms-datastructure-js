@@ -11,32 +11,32 @@ export class Stack<T> {
     }
 
     // Method to add an element to the top of the stack
-    push(element: T) {
+    push(element: T): void {
         this.items.push(element)
     }
 
     // Method to remove and return the element from the top of the stack
-    pop() {
+    pop(): T | undefined {
         return this.items.pop()
     }
 
     // Method to return the element at the top of the stack without removing it
-    peek() {
+    peek(): T {
         return this.items[this.items.length - 1]
     }
 
     // Method to check if the stack is empty
-    isEmpty() {
+    isEmpty(): boolean {
         return this.items.length === 0
     }
 
     // Method to return the number of elements in the stack
-    size() {
+    size(): number {
         return this.items.length
     }
 
     // Method to clear the stack by resetting the 'items' array to an empty array
-    clear() {
+    clear(): void {
         this.items = []
     }
 }

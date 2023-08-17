@@ -10,7 +10,7 @@ export class Deque<T> {
     }
 
     // Add an element to the front of the deque
-    addFront(element: T) {
+    addFront(element: T): void {
         if (this.isEmpty()) {
             // If the deque is empty, add the element to the back (alternative implementation).
             this.addBack(element);
@@ -32,13 +32,13 @@ export class Deque<T> {
     }
 
     // Add an element to the back of the deque
-    addBack(element: T) {
+    addBack(element: T): void {
         this.items[this.count] = element
         this.count++
     }
 
     // Remove and return the front element from the deque
-    removeFront() {
+    removeFront(): T | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -49,7 +49,7 @@ export class Deque<T> {
     }
 
     // Remove and return the back element from the deque
-    removeBack() {
+    removeBack(): T | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -60,7 +60,7 @@ export class Deque<T> {
     }
 
     // Get the front element of the deque without removing it
-    peekFront() {
+    peekFront(): T | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -68,7 +68,7 @@ export class Deque<T> {
     }
 
     // Get the back element of the deque without removing it
-    peekBack() {
+    peekBack(): T | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -76,24 +76,24 @@ export class Deque<T> {
     }
 
     // Check if the deque is empty
-    isEmpty() {
+    isEmpty(): boolean {
         return this.count - this.lowestCount === 0
     }
 
     // Get the current size of the deque
-    size() {
+    size(): number {
         return this.count - this.lowestCount
     }
 
     // Clear the deque, removing all elements
-    clear() {
+    clear(): void {
         this.items = {}
         this.count = 0
         this.lowestCount = 0
     }
 
     // String representation of the deque
-    toString() {
+    toString(): string {
         if (this.isEmpty()) {
             return ''
         }

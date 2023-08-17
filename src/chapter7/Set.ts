@@ -4,34 +4,34 @@ export class Set<T>{
         this.items = {}
     }
 
-    add(element: T) {
+    add(element: T): boolean {
         if (!this.has(element)) {
             this.items[element] = element
             return true
         }
         return false
     }
-    delete(element: T) {
+    delete(element: T): boolean {
         if (this.has(element)) {
             delete this.items[element]
             return true
         }
         return false
     }
-    has(element: T) {
+    has(element: T): boolean {
         return this.items.hasOwnProperty(element)
     }
-    clear() {
+    clear(): void {
         this.items = {}
     }
-    size() {
+    size(): number {
         return Object.keys(this.items).length
         /*Objetc.keys return an array that contains all the keys of the parameter*/
     }
     values(): T[] {
         return Object.values(this.items)
     }
-    union(otherSet: Set<T>) {
+    union(otherSet: Set<T>): Set<T> {
         const unionSet = new Set<T>()
 
         this.values().forEach(value => unionSet.add(value))
@@ -39,8 +39,8 @@ export class Set<T>{
 
         return unionSet
     }
-    intersection(otherSet: Set<T>) {
-        const intersectionSet = new Set()
+    intersection(otherSet: Set<T>): Set<T> {
+        const intersectionSet = new Set<T>()
         const values = this.values()
         const otherValues = otherSet.values()
         let biggerSet = values
@@ -57,7 +57,7 @@ export class Set<T>{
 
         return intersectionSet
     }
-    difference(otherSet: Set<T>) {
+    difference(otherSet: Set<T>): Set<T> {
         const differenceSet = new Set<T>()
         this.values().forEach(value => {
             if (!otherSet.has(value)) {
@@ -67,7 +67,7 @@ export class Set<T>{
 
         return differenceSet
     }
-    isSubsetOf(otherSet: Set<T>) {
+    isSubsetOf(otherSet: Set<T>): boolean {
         if (this.size() > otherSet.size()) {
             return false
         }

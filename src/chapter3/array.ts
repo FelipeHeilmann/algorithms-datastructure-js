@@ -5,7 +5,7 @@ const array = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',
 
 /* Logging the elements of the array */
 for (let i = 0; i < array.length; i++) {
-   // console.log(array[i])
+    // console.log(array[i])
 }
 
 /* ------------------------------------------------------------------------ */
@@ -89,13 +89,13 @@ for (let i = 0; i < averageTemp.length; i++) {
 // console.table(averageTemp)
 
 /* Multidimensional array */
-const matrix3x3x3: number[][][] = [];
+const matrix3x3x3: number[][][] = []
 for (let i = 0; i < 3; i++) {
-    matrix3x3x3[i] = [];
+    matrix3x3x3[i] = []
     for (let j = 0; j < 3; j++) {
-        matrix3x3x3[i][j] = [];
+        matrix3x3x3[i][j] = []
         for (let z = 0; z < 3; z++) {
-            matrix3x3x3[i][j][z] = i + j + z;
+            matrix3x3x3[i][j][z] = i + j + z
         }
     }
 }
@@ -131,7 +131,7 @@ newNumbers.sort()
 /*however, it sorts in a lexicographical way, assuming the elements are strings*/
 
 
-newNumbers.sort((a:number,b:number) =>  a - b)
+newNumbers.sort((a: number, b: number) => a - b)
 /*This callback function sort the array in this way:
     function(a, b){
         if(a < b){
@@ -148,7 +148,7 @@ const names = ['Ana', 'ana', 'John', 'john']
 names.sort()
 /*however, it sorts using the ASCII values for de letters*/
 
-names.sort((a:string, b:string) => a.localeCompare(b))
+names.sort((a: string, b: string) => a.localeCompare(b))
 /*This callback function sort the array in this way:
     function(a, b){
         if(a.toLowerCase() < b.toLowerCase()){
@@ -168,7 +168,7 @@ numbers.indexOf(10)
 numbers.lastIndexOf(10)
 
 /*Returns the first index of target in the array, but it was not fount, returns undefined*/
-numbers.find(number=> number > 5)
+numbers.find(number => number > 5)
 
 /*Returns true if the array contains the target*/
 numbers.includes(1)

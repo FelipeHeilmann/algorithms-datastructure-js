@@ -1,5 +1,5 @@
-import { Stack } from "./stack"
-import { StackObj } from "./stack-obj"
+import { Stack } from "./Stack"
+import { StackObj } from "./Stack-obj"
 
 const stack = new Stack()
 
@@ -27,18 +27,18 @@ stack.pop()
 
 console.log(stack2.toString())
 
-function decimalToBinary(decNumer: number){
+function decimalToBinary(decNumer: number) {
     const remStack = new Stack()
     let number = decNumer
     let rem
     let binaryString = ''
-    while(number > 0){
+    while (number > 0) {
         rem = Math.floor(number % 2)
         remStack.push(rem)
-        number = Math.floor(number /2)
+        number = Math.floor(number / 2)
     }
 
-    while(!remStack.isEmpty()){
+    while (!remStack.isEmpty()) {
         binaryString += `${remStack.pop()}`
     }
     return binaryString

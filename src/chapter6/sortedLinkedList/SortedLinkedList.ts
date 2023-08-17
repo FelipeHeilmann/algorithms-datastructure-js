@@ -9,16 +9,16 @@ export class SortedLinkedList<T> extends LinkedList<T>{
         this.compareFn = compare
         this.equalsFn = equalsFn
     }
-    insert(element: T, index: number = 0) {
+    insert(element: T, index: number = 0): boolean | undefined {
         if (this.isEmpty()) {
             return super.insert(element, 0)
         }
         const pos = this.getIndexNextSortedElement(element)
         return super.insert(element, pos)
     }
-    getIndexNextSortedElement(element: T) {
-        let current = this.head;
-        let i = 0;
+    getIndexNextSortedElement(element: T): number {
+        let current = this.head
+        let i = 0
         for (; i < this.size() && current; i++) {
             const comp = this.compareFn(element, current.element)
             if (comp === compare.LESS_THAN) {

@@ -7,25 +7,25 @@ export class StackLinkedList<T>{
         this.items = new DoublyLinkedList()
     }
 
-    push(element: T) {
+    push(element: T): void {
         this.items.push(element)
     }
-    pop() {
+    pop(): T | undefined {
         if (this.isEmpty()) {
             return undefined
         }
         return this.items.getElementAt(this.size() - 1)?.element
     }
-    isEmpty() {
+    isEmpty(): boolean {
         return this.items.isEmpty()
     }
-    size() {
+    size(): number {
         return this.items.size()
     }
-    clear() {
+    clear(): void {
         return this.items.clear()
     }
-    toString() {
+    toString(): string {
         return this.items.toString()
     }
 }

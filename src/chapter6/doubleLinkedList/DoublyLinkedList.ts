@@ -11,7 +11,7 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
         this.equalsFn = equalsFn
     }
 
-    push(element: T) {
+    push(element: T): void {
         const node = new DoublyNode(element);
         let current: DoublyNode<T>
 
@@ -25,7 +25,7 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
         }
         this.count++
     }
-    insert(element: T, index: number) {
+    insert(element: T, index: number): boolean {
         if (index >= 0 && index <= this.count) {
             const node = new DoublyNode(element)
             let current = this.head
@@ -58,7 +58,7 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
         }
         return false;
     }
-    removeAt(index: number) {
+    removeAt(index: number): T | undefined {
         if (index >= 0 && index < this.count) {
             let current = this.head
 
@@ -85,10 +85,10 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
             this.count--
             return current!.element
         }
-        return undefined;
+        return undefined
     }
 
-    indexOf(element: T) {
+    indexOf(element: T): number {
         let current = this.head
         for (let i = 0; i < this.count && current != null; i++) {
             if (this.equalsFn(element, current.element)) {
@@ -100,26 +100,26 @@ export class DoublyLinkedList<T> extends LinkedList<T> {
         // Return -1 if the element is not found in the linked list.
         return -1
     }
-    getHead() {
+    getHead(): DoublyNode<T> | undefined {
         return this.head
     }
-    getTail() {
+    getTail(): DoublyNode<T> | undefined {
         return this.tail
     }
     // Check if the linked list is empty
-    isEmpty() {
+    isEmpty(): boolean {
         return this.count === 0
     }
     // Get the current size of the linked list
-    size() {
+    size(): number {
         return this.count
     }
-    clear() {
+    clear(): void {
         super.clear()
         this.tail = undefined
     }
     // Convert the linked list to a string representation
-    toString() {
+    toString(): string {
         if (this.head == null) {
             return ''
         }

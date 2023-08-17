@@ -14,7 +14,7 @@ export class LinkedList<T> {
     }
 
     // Add an element to the end of the linked list
-    push(element: T) {
+    push(element: T): void {
         const node = new Node(element)
         let current: Node<T>
 
@@ -33,7 +33,7 @@ export class LinkedList<T> {
     }
 
     // Insert an element at a specific position in the linked list
-    insert(element: T, index: number) {
+    insert(element: T, index: number): boolean | undefined {
         if (index >= 0 && index <= this.count) {
             const node = new Node(element)
 
@@ -53,17 +53,16 @@ export class LinkedList<T> {
             this.count++
             return true
         }
-        return false
     }
 
     // Remove the first occurrence of an element from the linked list
-    remove(element: T) {
+    remove(element: T): T | undefined {
         const index = this.indexOf(element)
         return this.removeAt(index)
     }
 
     // Remove the element at a specific position from the linked list
-    removeAt(index: number) {
+    removeAt(index: number): T | undefined {
         if (index >= 0 && index < this.count) {
             let current = this.head
 
@@ -83,7 +82,7 @@ export class LinkedList<T> {
     }
 
     // Find the index of the first occurrence of an element in the linked list
-    indexOf(element: T) {
+    indexOf(element: T): number {
         let current = this.head
         for (let i = 0; i < this.count && current != null; i++) {
             if (this.equalsFn(element, current.element)) {
@@ -97,7 +96,7 @@ export class LinkedList<T> {
     }
 
     // Get the element at a specific position in the linked list
-    getElementAt(index: number) {
+    getElementAt(index: number): Node<T> | undefined {
         if (index >= 0 && index <= this.count) {
             let node = this.head
             for (let i = 0; i < index && node != null; i++) {
@@ -109,22 +108,22 @@ export class LinkedList<T> {
     }
 
     // Get the head (first element) of the linked list
-    getHead() {
+    getHead(): Node<T> | undefined {
         return this.head
     }
     // Check if the linked list is empty
-    isEmpty() {
+    isEmpty(): boolean {
         return this.count === 0
     }
     // Get the current size of the linked list
-    size() {
+    size(): number {
         return this.count
     }
-    clear() {
+    clear(): void {
         this.head = undefined
     }
     // Convert the linked list to a string representation
-    toString() {
+    toString(): string {
         if (this.head == null) {
             return ''
         }

@@ -1,6 +1,7 @@
 export class Queue<T> {
     private items: { [key: number]: T }
     private count: number
+    // used for manage the last item on the queue
     private lowestCount: number
 
     constructor() {
@@ -10,13 +11,13 @@ export class Queue<T> {
     }
 
     // Add an element to the end of the queue
-    enqueue(element: T) {
+    enqueue(element: T): void {
         this.items[this.count] = element
         this.count++
     }
 
     // Remove and return the front element from the queue
-    dequeue() {
+    dequeue(): T | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -27,7 +28,7 @@ export class Queue<T> {
     }
 
     // Get the front element of the queue without removing it
-    peek() {
+    peek(): T | undefined {
         if (this.isEmpty()) {
             return undefined
         }
@@ -35,24 +36,24 @@ export class Queue<T> {
     }
 
     // Check if the queue is empty
-    isEmpty() {
+    isEmpty(): boolean {
         return this.count - this.lowestCount === 0
     }
 
     // Get the current size of the queue
-    size() {
+    size(): number {
         return this.count - this.lowestCount
     }
 
     // Clear the queue, removing all elements
-    clear() {
+    clear(): void {
         this.items = {}
         this.count = 0
         this.lowestCount = 0
     }
 
     // String representation of the queue
-    toString() {
+    toString(): string {
         if (this.isEmpty()) {
             return ''
         }

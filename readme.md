@@ -12,10 +12,12 @@ O objetivo deste projeto é fornecer exemplos práticos e implementações de al
 - `chapter4/`: Exemplos e implementações referentes ao Capítulo 4 do livro que fala sobre stacks.
 - `chapter5/queue`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre queues.
 - `chapter5/deque`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre deques.
-- `chapter6/singleLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre single linked lists.
-- `chapter6/doubleLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre double linked lists.
-- `chapter6/circularLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre cirular linked lists.
-- `chapter6/stackLinkedList`: Exemplos e implementações referentes ao Capítulo 5 do livro que fala sobre stack usando doubly linked lists.
+- `chapter6/singleLinkedList`: Exemplos e implementações referentes ao Capítulo 6 do livro que fala sobre single linked lists.
+- `chapter6/doubleLinkedList`: Exemplos e implementações referentes ao Capítulo 6 do livro que fala sobre double linked lists.
+- `chapter6/circularLinkedList`: Exemplos e implementações referentes ao Capítulo 6 do livro que fala sobre cirular linked lists.
+- `chapter6/stackLinkedList`: Exemplos e implementações referentes ao Capítulo 6 do livro que fala sobre stack usando doubly linked lists.
+- `chapter7`: Exemplos e implementações referentes ao Capítulo 7 do livro que fala sobre stack usando set.
+- `chapter8`: Exemplos e implementações referentes ao Capítulo 7 do livro que fala sobre stack usando set.
 
 ## Como Contribuir
 

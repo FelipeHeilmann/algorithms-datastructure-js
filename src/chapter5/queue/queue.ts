@@ -1,7 +1,7 @@
 export class Queue<T> {
     private items: { [key: number]: T }
     private count: number
-    // used for manage the last item on the queue
+    // used for manage the first item on the queue
     private lowestCount: number
 
     constructor() {

@@ -1,4 +1,4 @@
-import { Dictionary } from './Dictionary/Dictionary';
+import { Dictionary } from "./Dictionary"
 const dictionary = new Dictionary()
 
 dictionary.setKey("Felipe", "felipeheilmannm@gmail.com")
@@ -12,6 +12,6 @@ console.log(dictionary.get('Felipe'))
 console.log(dictionary.keys())
 console.log(dictionary.values())
 
-dictionary.forEach((k: any, v: any) =>{
+dictionary.forEach((k: any, v: any) => {
     console.log(`forEach key ${k}, value: ${v}`)
 })

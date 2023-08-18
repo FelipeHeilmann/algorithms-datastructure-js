@@ -3,7 +3,7 @@ import { ValuePair } from "../ValueKeyPair"
 import { defaultToString } from "../utils"
 
 export class HashTableSeparateChaining<K, V>{
-    protected table: { [key: string]: LinkedList<ValuePair<K, V>> };
+    protected table: { [key: string]: LinkedList<ValuePair<K, V>> }
 
     constructor(protected toStrFn: (key: K) => string = defaultToString) {
         this.table = {};

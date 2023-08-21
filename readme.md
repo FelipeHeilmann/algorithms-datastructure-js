@@ -17,7 +17,8 @@ O objetivo deste projeto é fornecer exemplos práticos e implementações de al
 - `chapter6/circularLinkedList`: Exemplos e implementações referentes ao Capítulo 6 do livro que fala sobre cirular linked lists.
 - `chapter6/stackLinkedList`: Exemplos e implementações referentes ao Capítulo 6 do livro que fala sobre stack usando doubly linked lists.
 - `chapter7`: Exemplos e implementações referentes ao Capítulo 7 do livro que fala sobre stack usando set.
-- `chapter8`: Exemplos e implementações referentes ao Capítulo 7 do livro que fala sobre stack usando set.
+- `chapter8`: Exemplos e implementações referentes ao Capítulo 8 do livro que fala sobre dictionary e hash table.
+- `chapter9`: Exemplos e implementações referentes ao Capítulo 9 do livro que fala sobre recursão.
 
 ## Como Contribuir
 

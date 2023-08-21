@@ -21,6 +21,18 @@ export class HashTable<K, V>{
 
         return hash % 37
     }
+    /*
+    djb2HashCode(key: K){
+        const tableKey = this.toStrnFn(key)
+        let hash = 5381
+        for(let i = 0; i < tableKey.length; i++){
+            hash (hash * 33) + tableKey.charCodeAt(i)
+        }
+
+        return hash % 1013
+    }
+    
+    */
     hashCode(key: K): number {
         return this.loseloseHashCode(key)
     }

@@ -16,7 +16,7 @@ export class BinarySearchTree<T>{
             this.insertNode(this.root, key)
         }
     }
-    private insertNode(node: Node<T>, key: T): void {
+    protected insertNode(node: Node<T>, key: T): void {
         if (this.compareFn(key, node.key) === compare.LESS_THAN) {
             if (node.left === null) {
                 node.left = new Node<T>(key)
@@ -111,7 +111,7 @@ export class BinarySearchTree<T>{
     remove(key: T) {
         this.root = this.removeNode(this.root, key) || null
     }
-    private removeNode(node: Node<T> | null, key: T) {
+    protected removeNode(node: Node<T> | null, key: T) {
         if (node === null) {
             return null
         }

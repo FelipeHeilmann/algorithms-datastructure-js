@@ -20,6 +20,7 @@ O objetivo deste projeto é fornecer exemplos práticos e implementações de al
 - `chapter8`: Exemplos e implementações referentes ao Capítulo 8 do livro que fala sobre dictionary e hash table.
 - `chapter9`: Exemplos e implementações referentes ao Capítulo 9 do livro que fala sobre recursão.
 - `chapter10`: Exemplos e implementações referentes ao Capítulo 10 do livro que fala sobre binary tree, avl tree e red black tree.
+- `chapter11`: Exemplos e implementações referentes ao Capítulo 11 do livro que fala sobre heap, max and min heap.
 
 ## Como Contribuir
 

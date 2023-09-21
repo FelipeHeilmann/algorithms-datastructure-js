@@ -1,9 +1,10 @@
+import { Stack } from "../chapter4/Stack";
 import { Graph } from "./Graph";
-import { breadthFirstSearch } from "./utils";
+import { BFS, breadthFirstSearch } from "./utils";
 
 const graph = new Graph(false)
-const myVertices = ['A','B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
-for(let i = 0; i < myVertices.length; i++){
+const myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+for (let i = 0; i < myVertices.length; i++) {
     graph.addVertex(myVertices[i])
 }
 
@@ -20,8 +21,27 @@ graph.addEdge('E', 'I')
 
 console.log(graph.toString())
 
-breadthFirstSearch(graph, myVertices[0], (vertice) =>{
+breadthFirstSearch(graph, myVertices[0], (vertice) => {
     console.log(`Visited vertex ${vertice}`)
 })
+
+const shortedPathA = BFS(graph, myVertices[0])
+
+const fromVertex = myVertices[0]
+for (let i = 1; i < myVertices.length; i++) {
+    const toVertice = myVertices[i]
+    const path = new Stack<string | number>()
+    for (let vertice: string | number | null = toVertice; vertice !== fromVertex; vertice = shortedPathA.prodecessors[vertice!]) {
+        path.push(vertice!)
+    }
+
+    path.push(fromVertex)
+    let string = path.pop()
+    while (!path.isEmpty()) {
+        string += ` -  ${path.pop()}`
+    }
+
+    console.log(string)
+}
 
 

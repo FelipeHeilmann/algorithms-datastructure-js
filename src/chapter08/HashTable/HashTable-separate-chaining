@@ -1,4 +1,4 @@
-import { LinkedList } from "../../chapter6/singleLinkedList/LinkedList"
+import { LinkedList } from "../../chapter06/singleLinkedList/LinkedList"
 import { ValuePair } from "../ValueKeyPair"
 import { defaultToString } from "../utils"
 

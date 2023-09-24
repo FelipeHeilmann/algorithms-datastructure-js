@@ -12,3 +12,7 @@ export function defaultCompare<T>(a: T, b: T): number {
     }
     return a < b ? compare.LESS_THAN : compare.BIGGER_THAN;
 }
+
+export function defaultEquals(a: any, b: any): boolean {
+    return a === b
+}

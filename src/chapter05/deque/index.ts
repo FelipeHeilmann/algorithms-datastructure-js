@@ -1,4 +1,4 @@
-import { Deque } from "./deque";
+import { Deque } from "./Deque"
 
 const deque = new Deque()
 

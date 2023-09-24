@@ -1,7 +1,7 @@
-import { Deque } from "./deque"
+import { Deque } from "./Deque"
 
-function checkPalindrome(string: string){
-    if(string === undefined || string === null || string != null && string.length === 0){
+function checkPalindrome(string: string) {
+    if (string === undefined || string === null || string != null && string.length === 0) {
         return false
     }
 
@@ -9,15 +9,15 @@ function checkPalindrome(string: string){
     const lowerString = string.toLocaleLowerCase().split(' ').join(' ')
     let isEqual = true
     let firstChar, lastChar
-    for(let i = 0; i < lowerString.length; i++){
+    for (let i = 0; i < lowerString.length; i++) {
         deque.addBack(lowerString.charAt(i))
     }
 
-    while(deque.size() > 1 && isEqual){
+    while (deque.size() > 1 && isEqual) {
         firstChar = deque.removeFront()
         lastChar = deque.removeBack()
 
-        if(firstChar !== lastChar)
+        if (firstChar !== lastChar)
             isEqual = false
     }
 

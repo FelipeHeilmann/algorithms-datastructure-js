@@ -1,4 +1,4 @@
-import { Stack } from "../chapter4/Stack";
+import { Stack } from "../chapter04/Stack";
 import { Graph } from "./Graph";
 import { BFS, DFS, breadthFirstSearch, depthFirstSearch } from "./utils";
 

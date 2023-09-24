@@ -1,5 +1,5 @@
-import { Queue } from "../chapter5/queue/Queue";
-import { Dictionary } from "../chapter8/Dictionary/Dictionary";
+import { Queue } from "../chapter05/queue/Queue";
+import { Dictionary } from "../chapter08/Dictionary/Dictionary";
 import { Graph } from "./Graph";
 
 const Colors = {

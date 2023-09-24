@@ -14,4 +14,6 @@ export const initializeColors = (vertices: (string | number)[]) => {
 }
 
 
+export const INF_CONST = Number.MAX_SAFE_INTEGER
+
 

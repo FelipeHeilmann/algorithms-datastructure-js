@@ -1,6 +1,7 @@
 import { Stack } from "../chapter04/Stack";
 import { Graph } from "./Graph";
-import { BFS, DFS, breadthFirstSearch, depthFirstSearch } from "./utils";
+import { BFS, breadthFirstSearch } from "./breadthFirstSearch";
+import { DFS, depthFirstSearch } from "./depthFirstSearch";
 
 const graph = new Graph(false)
 const myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
@@ -62,7 +63,6 @@ grap2.addEdge('C', 'F')
 grap2.addEdge('F', 'E')
 
 const result = DFS(grap2)
-
 
 const fTimes = result.finished;
 let s = ''

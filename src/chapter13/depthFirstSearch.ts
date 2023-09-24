@@ -1,3 +1,23 @@
+/*
+A depth-first search (DFS) algorithm is used to explore and traverse a graph or tree by going as deeply as possible along each branch before backtracking. It starts from a specific source vertex and explores as far as possible along each branch before moving to an unvisited branch.
+
+Here's how DFS works:
+
+Start from a specified source vertex.
+Mark the source vertex as visited.
+Explore an unvisited neighbor of the current vertex.
+If an unvisited neighbor is found, repeat steps 2 and 3 for that neighbor. This means going deeper into the graph along that branch.
+If there are no unvisited neighbors, backtrack to the previous vertex and repeat step 3 for another unvisited neighbor, if available. This process continues until all paths have been explored.
+Continue this process until all vertices have been visited.
+The key characteristics of DFS are:
+
+It explores as deeply as possible along each branch before backtracking, which makes it well-suited for tasks such as searching for paths, cycle detection, and topological sorting.
+It can be implemented using recursion or a stack data structure to keep track of the vertices to be visited.
+The order in which vertices are visited depends on the choice of the starting vertex and the structure of the graph.
+*/
+
+
+
 import { Dictionary } from "../chapter08/Dictionary/Dictionary"
 import { Graph } from "./Graph"
 import { Colors, initializeColors } from "./utils"
@@ -80,3 +100,4 @@ const DFSVisit = (
     color[vertice] = Colors.BLACK
     finished[vertice] = ++time.count
 }
+

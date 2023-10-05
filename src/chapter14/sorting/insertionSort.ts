@@ -6,7 +6,7 @@ Insertion sort is a simple sorting algorithm that works similar to the way you s
 */
 
 
-function insertionSort(array: number[], compareFn = defaultCompare): number[]{
+export function insertionSort(array: number[], compareFn = defaultCompare): number[]{
     let temp
     for(let i = 1; i < array.length; i++){
         let j = i

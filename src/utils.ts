@@ -1,3 +1,5 @@
+export const INF_CONST = Number.MAX_SAFE_INTEGER
+
 export type ICompareFunction<T> = (a: T, b: T) => number;
 
 export type IEqualsFunction<T> = (a: T, b: T) => boolean
@@ -80,6 +82,12 @@ export function createNonSortedArray(size: number): number[] {
     return array
 }
 
+export function shuffle<T>(array: T[]): T[] {
+    for (let i = 0; i < array.length; i++) {
+        const randomIndex = Math.floor(Math.random() * array.length)
+        swap(array, i, randomIndex)
+    }
 
+    return array
+}
 
-export const INF_CONST = Number.MAX_SAFE_INTEGER

@@ -21,6 +21,8 @@ O objetivo deste projeto é fornecer exemplos práticos e implementações de al
 - `chapter9`: Exemplos e implementações referentes ao Capítulo 9 do livro que fala sobre recursão.
 - `chapter10`: Exemplos e implementações referentes ao Capítulo 10 do livro que fala sobre binary tree, avl tree e red black tree.
 - `chapter11`: Exemplos e implementações referentes ao Capítulo 11 do livro que fala sobre heap, max and min heap.
+- `chapter12`: Exemplos e implementações referentes ao Capítulo 12 do livro que fala sobre grafo, seus métodos e resolvendo problemas como menor distância entre dois vértices.
+- `chapter13`: Exemplos e implementações referentes ao Capítulo 13 do livro que fala sobre algoritimos de busca e ordenação.
 
 ## Como Contribuir
 

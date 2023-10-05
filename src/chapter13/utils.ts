@@ -1,19 +1,16 @@
-export const Colors = {
-    WHITE: 0,
-    GREY: 1,
-    BLACK: 2
+export function swap(array: number[], a: number, b: number): void{
+    [array[a], array[b]] = [array[b], array[a]]
 }
 
-export const initializeColors = (vertices: (string | number)[]) => {
-    const color: { [key: string | number]: string | number } = {}
-    for (let i = 0; i < vertices.length; i++) {
-        color[vertices[i]] = Colors.WHITE
+export function createNonSortedArray(size: number): number[]{
+    const array = []
+    for(let i = size; i >= 0; i--){
+        array.push(i)
     }
 
-    return color
+    return array
 }
 
-
-export const INF_CONST = Number.MAX_SAFE_INTEGER
-
-
+export function defaultEquals<T>(a: T, b: T): boolean {
+    return a === b;
+  }

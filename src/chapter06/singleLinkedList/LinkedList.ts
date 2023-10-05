@@ -1,4 +1,4 @@
-import { defaultEquals } from "../utils";
+import { defaultEquals } from "../../utils";
 import { Node } from "./Node";
 
 export class LinkedList<T> {

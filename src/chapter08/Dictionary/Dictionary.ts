@@ -1,5 +1,5 @@
 import { ValuePair } from "../ValueKeyPair"
-import { defaultToString } from "../utils"
+import { defaultToString } from "../../utils"
 
 export class Dictionary<K, V>{
     private table: { [key: string]: ValuePair<K, V> };

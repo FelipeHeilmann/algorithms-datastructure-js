@@ -19,7 +19,7 @@ Kruskal's algorithm systematically builds the minimum spanning tree by selecting
 */
 
 
-import { INF_CONST } from "./utils"
+import { INF_CONST } from "../utils"
 
 var graph = [
     [0, 2, 4, 0, 0, 0],

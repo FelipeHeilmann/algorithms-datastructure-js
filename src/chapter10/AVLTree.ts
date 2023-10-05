@@ -1,6 +1,6 @@
-import { BinarySearchTree } from "./BinarySearchTree";
-import { Node } from "./Node";
-import { Compare, ICompareFunction, defaultCompare } from "./utils";
+import { BinarySearchTree } from "./BinarySearchTree"
+import { Node } from "./Node"
+import { Compare, ICompareFunction, defaultCompare } from "./utils"
 
 enum BalanceFactor {
     UNBALANCED_RIGHT = 1,

@@ -23,7 +23,7 @@ It is used in various applications, such as finding connected components, solvin
 
 import { Queue } from "../chapter05/queue/Queue"
 import { Graph } from "./Graph"
-import { Colors, initializeColors } from "./utils"
+import { Colors, initializeColors } from "../utils"
 
 export const breadthFirstSearch = (
     graph: Graph,

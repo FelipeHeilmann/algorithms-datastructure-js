@@ -1,4 +1,4 @@
-import { compare, defaultCompare, ICompareFunction } from '../chapter6/utils'
+import { Compare, defaultCompare, ICompareFunction } from '../utils'
 import { Node } from './Node'
 
 export class BinarySearchTree<T>{
@@ -17,7 +17,7 @@ export class BinarySearchTree<T>{
         }
     }
     protected insertNode(node: Node<T>, key: T): void {
-        if (this.compareFn(key, node.key) === compare.LESS_THAN) {
+        if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
             if (node.left === null) {
                 node.left = new Node<T>(key)
             }
@@ -98,10 +98,10 @@ export class BinarySearchTree<T>{
             return false
         }
 
-        if (this.compareFn(node.key, key) === compare.LESS_THAN) {
+        if (this.compareFn(node.key, key) === Compare.LESS_THAN) {
             return this.searchNode(node.left, key)
         }
-        else if (this.compareFn(key, node.key) === compare.BIGGER_THAN) {
+        else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
             return this.searchNode(node.right, key)
         }
         else {
@@ -115,12 +115,12 @@ export class BinarySearchTree<T>{
         if (node === null) {
             return null
         }
-        if (this.compareFn(key, node.key) === compare.LESS_THAN) {
+        if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
             node.left = this.removeNode(node.left, key) || null
 
             return node
         }
-        else if (this.compareFn(key, node.key) === compare.BIGGER_THAN) {
+        else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
             node.right = this.removeNode(node.right, key) || null
 
             return node

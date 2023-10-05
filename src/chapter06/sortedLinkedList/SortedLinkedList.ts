@@ -1,10 +1,10 @@
 import { LinkedList } from "../singleLinkedList/LinkedList"
-import { compare, compareDefault, defaultEquals } from "../utils"
+import { Compare, defaultCompare, defaultEquals } from "../../utils"
 
 export class SortedLinkedList<T> extends LinkedList<T>{
     protected equalsFn: (a: T, b: T) => boolean
     protected compareFn: (a: T, b: T) => number
-    constructor(equalsFn = defaultEquals, compare = compareDefault) {
+    constructor(equalsFn = defaultEquals, compare = defaultCompare) {
         super(equalsFn)
         this.compareFn = compare
         this.equalsFn = equalsFn
@@ -21,7 +21,7 @@ export class SortedLinkedList<T> extends LinkedList<T>{
         let i = 0
         for (; i < this.size() && current; i++) {
             const comp = this.compareFn(element, current.element)
-            if (comp === compare.LESS_THAN) {
+            if (comp === Compare.LESS_THAN) {
                 return i
             }
             current = current.next

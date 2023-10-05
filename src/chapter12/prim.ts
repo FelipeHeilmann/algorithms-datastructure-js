@@ -20,7 +20,7 @@ It is often used in network design, such as designing efficient computer network
 Prim's algorithm systematically builds the minimum spanning tree by selecting edges with the smallest weights, resulting in an optimal tree that spans all vertices while minimizing the total edge weight.
 */
 
-import { INF_CONST } from "./utils"
+import { INF_CONST } from "../utils"
 
 var graph = [
     [0, 2, 4, 0, 0, 0],

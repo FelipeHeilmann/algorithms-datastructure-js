@@ -1,5 +1,5 @@
 import { ValuePair } from "../ValueKeyPair"
-import { defaultToString } from "../utils"
+import { defaultToString } from "../../utils"
 
 export class HashTable<K, V>{
     private toStrFn: (key: K) => string

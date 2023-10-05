@@ -1,4 +1,4 @@
-import { Dictionary } from "../chapter08/Dictionary/Dictionary";
+import { Dictionary } from "../chapter08/Dictionary/Dictionary"
 
 export class Graph {
     private isDirect: boolean

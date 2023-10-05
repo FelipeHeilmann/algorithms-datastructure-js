@@ -20,7 +20,7 @@ The order in which vertices are visited depends on the choice of the starting ve
 
 import { Dictionary } from "../chapter08/Dictionary/Dictionary"
 import { Graph } from "./Graph"
-import { Colors, initializeColors } from "./utils"
+import { Colors, initializeColors } from "../utils"
 
 export const depthFirstSearch = (graph: Graph, callback?: (element: any) => void) => {
     const vertices = graph.getVertices()

@@ -1,6 +1,6 @@
 import { LinkedList } from "../../chapter06/singleLinkedList/LinkedList"
 import { ValuePair } from "../ValueKeyPair"
-import { defaultToString } from "../utils"
+import { defaultToString } from "../../utils"
 
 export class HashTableSeparateChaining<K, V>{
     protected table: { [key: string]: LinkedList<ValuePair<K, V>> }

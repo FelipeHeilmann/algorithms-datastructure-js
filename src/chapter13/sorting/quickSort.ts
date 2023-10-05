@@ -1,16 +1,15 @@
-import { Compare, ICompareFunction, defaultCompare } from "../../chapter10/utils"
-import { createNonSortedArray, swap } from "../utils"
+import { Compare, ICompareFunction, defaultCompare, swap, createNonSortedArray } from "../../utils"
 
 /*
 Quicksort is a highly efficient sorting technique that divides a large data array into smaller ones. A vast array is divided into two arrays, one containing values smaller than the provided value, say pivot, on which the partition is based. The other contains values greater than the pivot value
 */
 
-function partition(
-    array: number[], 
-    left: number, 
-    right: number, 
+function partition<T>(
+    array: T[],
+    left: number,
+    right: number,
     compareFn: ICompareFunction<any>
-): number{
+): number {
     const pivot = array[Math.floor((right + left) / 2)]
     let i = left
     let j = right
@@ -34,29 +33,29 @@ function partition(
     return i
 }
 
-function quick(
-    array: number[], 
-    left: number, 
-    right: number,  
+function quick<T>(
+    array: T[],
+    left: number,
+    right: number,
     compareFn: ICompareFunction<any>
-): number[]{
+): T[] {
     let index
     if (array.length > 1) {
         index = partition(array, left, right, compareFn)
-    
+
         if (left < index - 1) {
-          quick(array, left, index - 1, compareFn)
+            quick(array, left, index - 1, compareFn)
         }
-    
+
         if (index < right) {
-          quick(array, index, right, compareFn)
+            quick(array, index, right, compareFn)
         }
-      }
+    }
 
     return array
 }
 
-function quickSort(array: number[], compareFn = defaultCompare): number[]{
+export function quickSort<T>(array: T[], compareFn = defaultCompare): T[] {
     return quick(array, 0, array.length - 1, compareFn)
 }
 

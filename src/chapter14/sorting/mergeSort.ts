@@ -1,5 +1,5 @@
-import { Compare, ICompareFunction, defaultCompare } from "../chapter10/utils"
-import { createNonSortedArray } from "./utils"
+import { Compare, ICompareFunction, defaultCompare } from "../../chapter10/utils"
+import { createNonSortedArray } from "../utils"
 
 /*
 Merge sort is one of the most efficient sorting algorithms. It works on the principle of Divide and Conquer based on the idea of breaking down a list into several sub-lists until each sublist consists of a single element and merging those sublists in a manner that results into a sorted list.

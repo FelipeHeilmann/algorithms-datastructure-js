@@ -1,6 +1,6 @@
-import { defaultCompare } from "../chapter06/utils"
-import { Compare } from "../chapter10/utils"
-import { createNonSortedArray, swap } from "./utils"
+import { defaultCompare } from "../../chapter06/utils"
+import { Compare } from "../../chapter10/utils"
+import { createNonSortedArray, swap } from "../utils"
 
 /*
 A selection-based sorting algorithm is described as an in-place comparison-based algorithm that divides the list into two parts, the sorted part on the left and the unsorted part on the right. Initially, the sorted section is empty, and the unsorted section contains the entire list.

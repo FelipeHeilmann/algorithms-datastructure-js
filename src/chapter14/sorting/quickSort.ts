@@ -1,5 +1,5 @@
-import { Compare, ICompareFunction, defaultCompare } from "../chapter10/utils"
-import { createNonSortedArray, swap } from "./utils"
+import { Compare, ICompareFunction, defaultCompare } from "../../chapter10/utils"
+import { createNonSortedArray, swap } from "../utils"
 
 /*
 Quicksort is a highly efficient sorting technique that divides a large data array into smaller ones. A vast array is divided into two arrays, one containing values smaller than the provided value, say pivot, on which the partition is based. The other contains values greater than the pivot value

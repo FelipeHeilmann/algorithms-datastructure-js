@@ -1,4 +1,4 @@
-import { Compare, ICompareFunction, defaultCompare } from "../../utils"
+import { Compare, defaultCompare } from "../../utils"
 export function findMaxValue<T>(array: T[], compareFn = defaultCompare) {
   if (array && array.length > 0) {
     let max = array[0]

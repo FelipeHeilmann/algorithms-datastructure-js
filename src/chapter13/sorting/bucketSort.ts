@@ -1,4 +1,4 @@
-import { createNonSortedArray } from "../utils"
+import { createNonSortedArray } from "../../utils"
 import { insertionSort } from "./insertionSort"
 
 function createBuckets(array: number[], bucketSize: number): number[][] {

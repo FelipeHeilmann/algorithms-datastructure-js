@@ -1,5 +1,5 @@
-import { Compare, defaultCompare } from "../../utils";
-import { quickSort } from "../sorting/quickSort";
+import { Compare, defaultCompare } from "../../utils"
+import { quickSort } from "../sorting/quickSort"
 
 export function binarySearchRecursive<T>(
     array: T[],

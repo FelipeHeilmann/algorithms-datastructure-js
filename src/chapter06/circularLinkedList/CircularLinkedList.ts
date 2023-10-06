@@ -1,6 +1,6 @@
-import { LinkedList } from "../singleLinkedList/LinkedList";
-import { Node } from "../singleLinkedList/Node";
-import { defaultEquals } from "../../utils";
+import { LinkedList } from "../singleLinkedList/LinkedList"
+import { Node } from "../singleLinkedList/Node"
+import { defaultEquals } from "../../utils"
 
 export class CircularLinkedList<T> extends LinkedList<T>{
     protected equalsFn: (a: T, b: T) => boolean

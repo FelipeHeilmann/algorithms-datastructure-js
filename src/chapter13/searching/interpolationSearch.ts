@@ -1,4 +1,4 @@
-import { Compare, biggerEquals, defaultCompare, defaultDiff, defaultEquals, lesserEquals } from "../../utils";
+import { Compare, biggerEquals, defaultCompare, defaultDiff, defaultEquals, lesserEquals } from "../../utils"
 
 export function interpolatioSearch<T>(
     array: T[], value: T,

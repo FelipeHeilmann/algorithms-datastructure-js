@@ -1,7 +1,7 @@
-import { Stack } from "../chapter04/Stack";
-import { Graph } from "./Graph";
-import { BFS, breadthFirstSearch } from "./breadthFirstSearch";
-import { DFS, depthFirstSearch } from "./depthFirstSearch";
+import { Stack } from "../chapter04/Stack"
+import { Graph } from "./Graph"
+import { BFS, breadthFirstSearch } from "./breadthFirstSearch"
+import { DFS, depthFirstSearch } from "./depthFirstSearch"
 
 const graph = new Graph(false)
 const myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']

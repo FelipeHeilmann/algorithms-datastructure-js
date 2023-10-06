@@ -1,4 +1,4 @@
-import { CircularLinkedList } from "./CircularLinkedList";
+import { CircularLinkedList } from "./CircularLinkedList"
 
 const linkedList = new CircularLinkedList()
 

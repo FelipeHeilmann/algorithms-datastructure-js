@@ -1,4 +1,4 @@
-import { defaultEquals } from "../../utils";
+import { defaultEquals } from "../../utils"
 
 function sequencialSearch<T>(
   array: T[],

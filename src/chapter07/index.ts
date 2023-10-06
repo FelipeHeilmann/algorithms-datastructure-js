@@ -1,4 +1,4 @@
-import { Set } from "./Set";
+import { Set } from "./Set"
 
 const set = new Set()
 

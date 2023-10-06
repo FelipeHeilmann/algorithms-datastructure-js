@@ -1,6 +1,6 @@
-import { LinkedList } from "../singleLinkedList/LinkedList";
-import { defaultEquals } from "../../utils";
-import { DoublyNode } from "./DoublyNode";
+import { LinkedList } from "../singleLinkedList/LinkedList"
+import { defaultEquals } from "../../utils"
+import { DoublyNode } from "./DoublyNode"
 
 export class DoublyLinkedList<T> extends LinkedList<T> {
     protected head: DoublyNode<T> | undefined;

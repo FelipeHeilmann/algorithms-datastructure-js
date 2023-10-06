@@ -1,4 +1,4 @@
-import { createNonSortedArray } from "../utils"
+import { createNonSortedArray } from "../../utils"
 
 function countingSort(array: any[]): any[]{
     if(array.length < 2){

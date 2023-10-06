@@ -1,4 +1,4 @@
-import { Node } from "../singleLinkedList/Node";
+import { Node } from "../singleLinkedList/Node"
 
 export class DoublyNode<T> extends Node<T> {
     public element: T

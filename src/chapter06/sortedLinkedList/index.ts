@@ -1,4 +1,4 @@
-import { SortedLinkedList } from "./SortedLinkedList";
+import { SortedLinkedList } from "./SortedLinkedList"
 
 const linkedList = new SortedLinkedList()
 

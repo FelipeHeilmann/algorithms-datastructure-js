@@ -1,4 +1,4 @@
-import { Compare, defaultCompare, ICompareFunction, reverseCompare, swap } from '../utils'
+import { Compare, defaultCompare, ICompareFunction, reverseCompare, swap } from "../utils"
 
 export class MinHeap<T>{
     protected heap: T[]

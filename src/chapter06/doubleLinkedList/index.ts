@@ -1,5 +1,5 @@
-import { LinkedList } from "../singleLinkedList/LinkedList";
-import { DoublyLinkedList } from "./DoublyLinkedList";
+import { LinkedList } from "../singleLinkedList/LinkedList"
+import { DoublyLinkedList } from "./DoublyLinkedList"
 
 const doubleLinkedList = new DoublyLinkedList()
 

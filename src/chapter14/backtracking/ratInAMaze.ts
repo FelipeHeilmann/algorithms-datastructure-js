@@ -27,7 +27,7 @@ function findPath(maze: Array<Array<number>>, x: number, y: number, solution: Ar
     return false
 }
 
-export function ratInMaze(maze: Array<Array<number>>): Array<Array<number>> | number {
+export function ratInMaze(maze: Array<Array<number>>): Array<Array<number>> | string {
     const solution: Array<Array<number>> = []
     for (let i = 0; i < maze.length; i++) {
         solution[i] = []
@@ -39,7 +39,7 @@ export function ratInMaze(maze: Array<Array<number>>): Array<Array<number>> | nu
         return solution
     }
 
-    return -1
+    return 'NO SOLUTION EXISTS'
 }
 
 const maze = [
